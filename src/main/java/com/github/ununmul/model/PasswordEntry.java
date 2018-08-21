@@ -23,4 +23,12 @@ public class PasswordEntry {
     public String getLogin() {
         return login;
     }
+
+    public String toCSVString () {
+        return website + ";" + password + ";" + login;
+    }
+
+    public String[] toArray () {
+        return new String[] {website, password, login};
+    }
 }
