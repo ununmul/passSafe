@@ -1,5 +1,10 @@
 package com.github.ununmul.model;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 public class PasswordEntry {
 
     private String website;
@@ -31,4 +36,5 @@ public class PasswordEntry {
     public String[] toArray () {
         return new String[] {website, password, login};
     }
+
 }

@@ -2,12 +2,10 @@ package com.github.ununmul.files;
 
 import com.github.ununmul.model.PasswordEntry;
 import com.opencsv.CSVWriter;
-import com.sun.deploy.ref.Helpers;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.List;
 
 import static com.opencsv.ICSVParser.DEFAULT_ESCAPE_CHARACTER;
