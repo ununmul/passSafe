@@ -4,17 +4,22 @@ import com.github.ununmul.model.PasswordEntry;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 abstract public class AbstractFileReader implements FileReader {
 
-    protected File getFile(String path) {
+    private static String PATH = "C:\\PasswordManager\\storage";
+
+    File getFile(String path) {
         if (path == null) {
             throw new IllegalArgumentException("May not be null");
         }
-        return new File(path);
+        path = PATH + "\\" + path;
+        return Paths.get(path).toFile();
     }
+
     @Override
     public List<PasswordEntry> getPasswordEntries(String path) throws IOException {
         List<PasswordEntry> result = new ArrayList<>();

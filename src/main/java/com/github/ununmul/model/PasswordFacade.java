@@ -3,6 +3,8 @@ package com.github.ununmul.model;
 import com.github.ununmul.generator.GeneratorType;
 import com.github.ununmul.generator.PasswordGeneratorFacade;
 
+import java.util.logging.Logger;
+
 public class PasswordFacade {
 
     private PasswordGeneratorFacade passwordGeneratorFacade;
