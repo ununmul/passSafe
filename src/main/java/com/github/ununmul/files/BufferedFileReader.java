@@ -17,6 +17,22 @@ public class BufferedFileReader extends AbstractFileReader {
     @Override
     public List<String> read(String path) throws IOException {
         File file = getFile(path);
+
+        List<String> result = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new java.io.FileReader(file))) {
+            String line = reader.readLine();
+            while (line != null) {
+                result.add(line);
+                line = reader.readLine();
+            }
+        }
+        return result;
+    }
+    /*
+    @Override
+    public List<String> read(String path) throws IOException {
+        File file = getFile(path);
         List<String> list = new ArrayList<String>();
 
         try (Scanner skaner = new Scanner(file)) {
@@ -29,5 +45,5 @@ public class BufferedFileReader extends AbstractFileReader {
         }
 
         return list;
-    }
+    } */
 }

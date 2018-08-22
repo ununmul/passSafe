@@ -2,7 +2,7 @@ package com.github.ununmul;
 
 import com.github.ununmul.outlook.AppView;
 
-public class Main {
+public class AppStart {
 
     public static void main(String[] args) {
 

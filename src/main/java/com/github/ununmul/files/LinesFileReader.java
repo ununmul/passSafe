@@ -15,10 +15,11 @@ public class LinesFileReader extends AbstractFileReader {
         File file = getFile(path);
         List<String> list = new ArrayList<String>();
 
-        try (BufferedReader czytnik = new BufferedReader(new FileReader(path))) {
+        try (BufferedReader czytnik = new BufferedReader(new FileReader(file))) {
             String linia = czytnik.readLine();
-            while ((linia) != null) {
+            while (linia != null) {
                 list.add(linia);
+                linia = czytnik.readLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
